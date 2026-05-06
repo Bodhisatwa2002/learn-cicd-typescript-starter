@@ -15,6 +15,8 @@ describe("getAPIKey", () => {
   });
 
   test("returns the API key when header is valid", () => {
-    expect(getAPIKey({ authorization: "ApiKey my-secret-key" })).toBe("wrong-key");
+    expect(getAPIKey({ authorization: "ApiKey my-secret-key" })).toBe(
+      "my-secret-key",
+    );
   });
 });
